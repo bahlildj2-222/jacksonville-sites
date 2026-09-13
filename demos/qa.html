@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Design browser QA</title><style>body{font:14px monospace;margin:30px;background:#f5f5f0;color:#111}pre{white-space:pre-wrap;overflow-wrap:anywhere}@media(prefers-reduced-motion:reduce){*{animation:none}}</style></head><body><h1>Fixed-viewport render verification</h1><p>Same-origin rendered checks at 360px, 390px and 1440px. Test harness only.</p><pre id="report">Starting render checks…</pre><script>const pages=[{"key": "restaurant", "path": "../flamin-bacon-bbq_2026-09-12.html?v=c03010ea568b"}, {"key": "landscaping", "path": "../roark-landscape-demo.html?v=d7263ffa5b18"}, {"key": "salon", "path": "../demos/salon-demo.html?v=07bd6cf0c7d7"}, {"key": "smoke", "path": "../demos/smoke-shop-demo.html?v=5a4edb65a7aa"}, {"key": "cleaning", "path": "../demos/cleaning-demo.html?v=7795a987aee5"}, {"key": "laundry", "path": "../demos/washeteria-demo.html?v=1f6033841309"}, {"key": "hotel", "path": "../demos/hotel-demo.html?v=2a293d0f1a60"}, {"key": "roofing", "path": "../demos/roofing-demo.html?v=960b2272717b"}, {"key": "hvac", "path": "../demos/hvac-demo.html?v=523f6405a396"}];
+const results=[];const report=document.getElementById('report');
+const pause=t=>new Promise(r=>setTimeout(r,t));
+async function inspect(page,width){
+ const frame=document.createElement('iframe');frame.title=page.key+' '+width+'px QA';frame.style.cssText=`width:${width}px;height:900px;border:0;display:block;position:absolute;left:-10000px;top:0;`;document.body.append(frame);
+ await new Promise((resolve,reject)=>{frame.onload=resolve;frame.onerror=reject;frame.src=page.path});
+ const doc=frame.contentDocument,win=frame.contentWindow;
+ await Promise.race([doc.fonts.ready,pause(8000)]);await pause(650);
+ const visible=el=>{const r=el.getBoundingClientRect(),s=win.getComputedStyle(el);return r.width>0&&r.height>0&&s.display!=='none'&&s.visibility!=='hidden'};
+ const buttons=[...doc.querySelectorAll('button,input[type=range],input[type=submit],a.btn,a.button,a.cta,[role=tab]')].filter(visible);
+ const short=buttons.map(el=>({text:(el.textContent||el.getAttribute('aria-label')||el.tagName).trim().slice(0,65),height:Math.round(el.getBoundingClientRect().height),width:Math.round(el.getBoundingClientRect().width)})).filter(r=>r.height<43||r.width<43);
+ const images=[...doc.images].map(i=>({alt:i.alt,loaded:i.complete&&i.naturalWidth>0}));
+ const result={page:page.key,viewport:width,title:doc.title,documentWidth:doc.documentElement.scrollWidth,bodyWidth:doc.body.scrollWidth,overflow:Math.max(doc.documentElement.scrollWidth,doc.body.scrollWidth)>width+2,fontStatus:doc.fonts.status,brokenImages:images.filter(i=>!i.loaded),smallControls:short,heading:doc.querySelector('h1')?.innerText,visibleHeading:doc.querySelector('h1')?visible(doc.querySelector('h1')):false};
+ results.push(result);report.textContent=JSON.stringify({status:'running',completed:results.length,total:pages.length*3,results},null,2);frame.remove();
+}
+(async()=>{for(const page of pages){for(const width of [360,390,1440]){try{await inspect(page,width)}catch(e){results.push({page:page.key,viewport:width,error:String(e)})}}}report.textContent=JSON.stringify({status:'complete',results},null,2);document.title='QA complete — nine designs';})();
+</script></body></html>
