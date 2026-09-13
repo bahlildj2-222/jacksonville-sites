@@ -555,7 +555,7 @@ h1, h2, h3, .font-display {
 /* 3D Dimensional CSS Washing Machine */
 .washer-frame {
   position: relative;
-  width: 320px;
+  width: min(320px, 100%);
   height: 380px;
   margin: 0 auto;
   background: linear-gradient(145deg, #1E293B, #0F172A);
@@ -761,7 +761,7 @@ h1, h2, h3, .font-display {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -867,7 +867,7 @@ h1, h2, h3, .font-display {
 
 .reviews-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -1007,7 +1007,7 @@ h1, h2, h3, .font-display {
   padding-top: 1.5rem;
 }
 </style>
-</head>
+<style>@media(max-width:560px){.washer-frame{padding:12px}.washer-top-panel{padding:10px 6px;gap:5px}.washer-body{max-width:100%}.mode-btn{min-width:0;white-space:normal}.hero-title{overflow-wrap:anywhere}.simulator-container>*{min-width:0}}</style></head>
 <body>
 <!-- Header / Navigation -->
 <header class="header">
@@ -1060,7 +1060,6 @@ h1, h2, h3, .font-display {
           Get Directions
         </a>
 </div>
-
 </div>
 <div class="hero-photo-wrapper">
 <div class="editorial-card">
@@ -1138,19 +1137,19 @@ h1, h2, h3, .font-display {
           Select Simulated Wash Mode
         </div>
 <div class="mode-selector">
-<button class="mode-btn active" onclick="setCycle('normal', '105°F Warm', '1,200 RPM', '35 MIN', '30 LBS')">
+<button class="mode-btn active" onclick="setCycle('normal', '105°F Warm', '1,200 RPM', '35 MIN', '30 LBS', this)">
 <span>Normal Everyday</span>
 <small style="opacity:0.7; font-size:0.75rem;">Standard Garments</small>
 </button>
-<button class="mode-btn" onclick="setCycle('bedding', '130°F Hot', '1,400 RPM', '50 MIN', '80 LBS')">
+<button class="mode-btn" onclick="setCycle('bedding', '130°F Hot', '1,400 RPM', '50 MIN', '80 LBS', this)">
 <span>Heavy Bedding</span>
 <small style="opacity:0.7; font-size:0.75rem;">Duvets &amp; Comforters</small>
 </button>
-<button class="mode-btn" onclick="setCycle('express', '95°F Eco', '1,000 RPM', '20 MIN', '20 LBS')">
+<button class="mode-btn" onclick="setCycle('express', '95°F Eco', '1,000 RPM', '20 MIN', '20 LBS', this)">
 <span>Express 20-Min</span>
 <small style="opacity:0.7; font-size:0.75rem;">Light Quick Wash</small>
 </button>
-<button class="mode-btn" onclick="setCycle('sanitize', '145°F High', '1,400 RPM', '55 MIN', '60 LBS')">
+<button class="mode-btn" onclick="setCycle('sanitize', '145°F High', '1,400 RPM', '55 MIN', '60 LBS', this)">
 <span>Sanitize Cycle</span>
 <small style="opacity:0.7; font-size:0.75rem;">Deep Thermal Clean</small>
 </button>
@@ -1293,7 +1292,6 @@ h1, h2, h3, .font-display {
 </div>
 </section>
 <!-- Customer Reviews Section -->
-
 <!-- Location & Hours Section -->
 <section class="location-section" id="location">
 <div class="section-container">
@@ -1369,7 +1367,7 @@ h1, h2, h3, .font-display {
   </div>
 </footer>
 <script>
-function setCycle(mode, temp, rpm, time, cap) {
+function setCycle(mode, temp, rpm, time, cap, button) {
   document.getElementById('tele-temp').innerText = temp;
   document.getElementById('tele-rpm').innerText = rpm;
   document.getElementById('tele-time').innerText = time;
@@ -1391,8 +1389,8 @@ function setCycle(mode, temp, rpm, time, cap) {
   btns.forEach(function(b) {
     b.classList.remove('active');
   });
-  if (event && event.currentTarget) {
-    event.currentTarget.classList.add('active');
+  if (button) {
+    button.classList.add('active');
   }
 }
 </script>
