@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html data-sf-inline-controls="true" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -128,6 +128,7 @@ figure.card figcaption{position:absolute;left:14px;right:14px;bottom:14px;backgr
 .addr{font-family:'Playfair Display',Georgia,serif;font-size:21px;line-height:1.4;margin:6px 0 14px}
 .vlinks{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
 /* foundation controls blended into the header lining */
+html[data-theme="dark"] body.sf-adjusted{background-color:var(--bg) !important;color:var(--ink) !important}
 html #sf-controls-root{top:10px !important;right:12px !important;max-width:calc(100vw - 24px) !important}
 #sf-controls-root .sf-controls-box{background:transparent !important;border:0 !important;box-shadow:none !important;backdrop-filter:none !important;padding:0 !important;gap:8px !important;border-radius:999px !important}
 #sf-controls-root .sf-btn{background:var(--card) !important;border:1.5px solid var(--line) !important;color:var(--ink) !important;border-radius:999px !important;min-height:44px !important;min-width:44px !important;padding:8px 14px !important;font-family:'Jost',system-ui,sans-serif !important;font-size:14px !important;font-weight:600 !important}
@@ -290,6 +291,11 @@ footer a:hover,footer a:focus-visible{color:var(--accent);text-decoration:underl
 body.sf-adjusted,
 html.sf-adjusted body {
   padding-top: 60px !important;
+}
+/* Inline-blend mode (Brandon, Sept 14 2026): controls live inside the page's own header lining — no top reservation. */
+html[data-sf-inline-controls] body.sf-adjusted,
+html[data-sf-inline-controls] html.sf-adjusted body {
+  padding-top: 0 !important;
 }/* 5. Dark Mode Palette Overrides */
 html[data-theme="dark"]:not([data-sf-preserve-theme], [data-sf-preserve-theme] *){
   color-scheme: dark !important;
@@ -407,7 +413,7 @@ html[data-theme="light"] a:not([class*="btn"]):not([class*="button"]):not([class
 @media print{#sf-controls-root{display:none!important}body.sf-adjusted{padding-top:0!important}}
 
 </style></head>
-<body>
+<body data-sf-preserve-theme="true">
 <header>
 <div class="wrap bar">
 <a class="wordmark" href="#top">The <b>Glossary</b></a>
@@ -1113,13 +1119,16 @@ html[data-theme="light"] a:not([class*="btn"]):not([class*="button"]):not([class
     document.documentElement.removeAttribute('data-theme');
     var art=document.querySelectorAll('[class*="hero"], [class*="banner"], .art, .washer-frame, [class*="scene"], [class*="visual"], [class*="cutaway"], button:not(.sf-btn), a[class*="btn"], a[class*="cta"]');
     for(var z=0;z<art.length;z++){
-      var item=art[z];if(item.closest('#sf-controls-root'))continue;
+      var item=art[z];if(item.closest('#sf-controls-root')||item.closest('[data-sf-preserve-theme]'))continue;
       item.style.color=getComputedStyle(item).color;
       item.setAttribute('data-sf-preserve-theme','true');
     }
     // Keep fixed/sticky navigation below the control box rather than underneath it.
-    var heads=document.querySelectorAll('header,nav,.topbar,.top-bar,.header,.navbar');
-    for(var z=0;z<heads.length;z++){var h=heads[z],st=getComputedStyle(h);if((st.position==='fixed'||st.position==='sticky')&&parseFloat(st.top)<65)h.style.setProperty('top','68px','important');}
+    // Inline-blend pages (data-sf-inline-controls) keep their own header lining at the top instead.
+    if(!document.documentElement.hasAttribute('data-sf-inline-controls')){
+      var heads=document.querySelectorAll('header,nav,.topbar,.top-bar,.header,.navbar');
+      for(var z=0;z<heads.length;z++){var h=heads[z],st=getComputedStyle(h);if((st.position==='fixed'||st.position==='sticky')&&parseFloat(st.top)<65)h.style.setProperty('top','68px','important');}
+    }
     if(savedThemeAttr)document.documentElement.setAttribute('data-theme',savedThemeAttr);
 
     initTranslations();
