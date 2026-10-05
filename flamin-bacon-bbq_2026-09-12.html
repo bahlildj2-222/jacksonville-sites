@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html data-sf-inline-controls="true" data-sf-native-theme="dark" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -70,6 +70,18 @@
       --amber-gold: #ffb703;
       --text-main: #f8f9fa;
       --text-muted: #d0c7be;
+      --heading: #ffffff;
+      --ink-rgb: 255, 255, 255;
+      --amber-text: #ffb703;
+      --nav-bg: rgba(18, 12, 10, 0.92);
+      --surface-deep: #150f0c;
+      --surface-story: #160f0d;
+      --surface-footer: #0d0806;
+      --surface-band: rgba(28, 20, 17, 0.6);
+      --surface-band-soft: rgba(28, 20, 17, 0.4);
+      --calc-bg: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(28,20,17,0.9));
+      --calc-result-bg: rgba(0,0,0,0.4);
+      --shadow-deep: rgba(0,0,0,0.6);
       --border-ember: rgba(255, 107, 53, 0.25);
       --font-heading: 'Bitter', Georgia, serif;
       --font-body: 'Source Sans 3', -apple-system, sans-serif;
@@ -116,7 +128,7 @@
     }
 
     .navbar {
-      background: rgba(18, 12, 10, 0.92);
+      background: var(--nav-bg);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border-ember);
       position: sticky;
@@ -152,13 +164,13 @@
       font-weight: 900;
       font-size: 1.5rem;
       letter-spacing: -0.02em;
-      color: #fff;
+      color: var(--heading);
       text-transform: uppercase;
     }
 
     .brand-tag {
       font-size: 0.75rem;
-      color: var(--amber-gold);
+      color: var(--amber-text);
       display: block;
       letter-spacing: 0.05em;
       font-family: var(--font-body);
@@ -211,7 +223,7 @@
     }
 
     .btn-secondary {
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(var(--ink-rgb), 0.08);
       color: var(--text-main);
       border: 1px solid var(--border-ember);
     }
@@ -242,7 +254,7 @@
       background: rgba(255, 183, 3, 0.12);
       border: 1px solid rgba(255, 183, 3, 0.3);
       border-radius: 50px;
-      color: var(--amber-gold);
+      color: var(--amber-text);
       font-weight: 700;
       font-size: 0.85rem;
       margin-bottom: 1.25rem;
@@ -256,7 +268,7 @@
       text-transform: uppercase;
       letter-spacing: -0.03em;
       margin-bottom: 1.25rem;
-      color: #fff;
+      color: var(--heading);
     }
 
     .hero-title span {
@@ -284,7 +296,7 @@
       gap: 1.5rem;
       font-size: 0.9rem;
       color: var(--text-muted);
-      border-top: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid rgba(var(--ink-rgb), 0.08);
       padding-top: 1.25rem;
     }
 
@@ -304,7 +316,7 @@
       overflow: hidden;
       background: var(--bg-card);
       border: 1px solid var(--border-ember);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 0 30px rgba(255,107,53,0.15);
+      box-shadow: 0 20px 40px var(--shadow-deep), 0 0 30px rgba(255,107,53,0.15);
     }
 
     .hero-img-wrapper {
@@ -361,7 +373,7 @@
 
     .niche-visual-section {
       padding: 4rem 0;
-      background: rgba(28, 20, 17, 0.6);
+      background: var(--surface-band);
       border-top: 1px solid var(--border-ember);
       border-bottom: 1px solid var(--border-ember);
     }
@@ -373,7 +385,7 @@
       text-transform: uppercase;
       text-align: center;
       margin-bottom: 0.5rem;
-      color: #fff;
+      color: var(--heading);
     }
 
     .section-subtitle {
@@ -416,7 +428,7 @@
     }
 
     .smoker-stat-box {
-      background: rgba(255,255,255,0.04);
+      background: rgba(var(--ink-rgb), 0.04);
       border: 1px solid rgba(255,107,53,0.2);
       border-radius: 10px;
       padding: 1rem 1.25rem;
@@ -426,7 +438,7 @@
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      color: var(--amber-gold);
+      color: var(--amber-text);
       font-weight: 700;
       margin-bottom: 0.25rem;
     }
@@ -435,7 +447,7 @@
       font-family: var(--font-heading);
       font-size: 1.4rem;
       font-weight: 800;
-      color: #fff;
+      color: var(--heading);
     }
 
     .temp-selector {
@@ -447,8 +459,8 @@
     .temp-btn {
       flex: 1;
       padding: 0.5rem;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(var(--ink-rgb), 0.05);
+      border: 1px solid rgba(var(--ink-rgb), 0.15);
       color: var(--text-muted);
       border-radius: 6px;
       font-size: 0.85rem;
@@ -529,18 +541,21 @@
       font-family: var(--font-heading);
       font-size: 1.25rem;
       font-weight: 800;
-      color: #fff;
+      color: var(--heading);
     }
 
     .menu-item-price {
       font-family: var(--font-heading);
       font-size: 1.2rem;
       font-weight: 900;
-      color: var(--amber-gold);
+      color: var(--amber-text);
       background: rgba(255,183,3,0.1);
       padding: 0.2rem 0.6rem;
       border-radius: 6px;
-      white-space: nowrap;
+      white-space: normal;
+      text-align: right;
+      flex: 0 1 auto;
+      line-height: 1.25;
     }
 
     .menu-item-desc {
@@ -560,7 +575,7 @@
 
     .calculator-box {
       margin-top: 3.5rem;
-      background: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(28,20,17,0.9));
+      background: var(--calc-bg);
       border: 1px solid var(--border-ember);
       border-radius: 14px;
       padding: 2rem;
@@ -571,7 +586,7 @@
       font-size: 1.4rem;
       font-weight: 800;
       margin-bottom: 0.5rem;
-      color: #fff;
+      color: var(--heading);
     }
 
     .calc-grid {
@@ -599,13 +614,13 @@
       width: 100%;
       height: 8px;
       border-radius: 4px;
-      background: rgba(255,255,255,0.15);
+      background: rgba(var(--ink-rgb), 0.15);
       outline: none;
       accent-color: var(--flame-orange);
     }
 
     .calc-result-card {
-      background: rgba(0,0,0,0.4);
+      background: var(--calc-result-bg);
       border: 1px solid rgba(255,183,3,0.3);
       border-radius: 10px;
       padding: 1.25rem;
@@ -623,9 +638,9 @@
 
     .story-section {
       padding: 4rem 0;
-      background: #160f0d;
-      border-top: 1px solid rgba(255,255,255,0.05);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      background: var(--surface-story);
+      border-top: 1px solid rgba(var(--ink-rgb), 0.05);
+      border-bottom: 1px solid rgba(var(--ink-rgb), 0.05);
     }
 
     .story-box {
@@ -639,7 +654,7 @@
       font-size: 2.2rem;
       font-weight: 900;
       margin-bottom: 1rem;
-      color: #fff;
+      color: var(--heading);
     }
 
     .story-text {
@@ -695,7 +710,7 @@
 
     .visit-section {
       padding: 5rem 0;
-      background: rgba(28, 20, 17, 0.4);
+      background: var(--surface-band-soft);
       border-top: 1px solid var(--border-ember);
     }
 
@@ -717,7 +732,7 @@
       font-family: var(--font-heading);
       font-size: 1.4rem;
       font-weight: 800;
-      color: #fff;
+      color: var(--heading);
       margin-bottom: 1rem;
       display: flex;
       align-items: center;
@@ -732,12 +747,12 @@
       display: flex;
       justify-content: space-between;
       padding: 0.5rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(var(--ink-rgb), 0.05);
       color: var(--text-muted);
     }
 
     .hours-row strong {
-      color: #fff;
+      color: var(--heading);
     }
 
     .accordion-item {
@@ -753,7 +768,7 @@
       padding: 1rem 1.25rem;
       background: none;
       border: none;
-      color: #fff;
+      color: var(--heading);
       font-family: var(--font-heading);
       font-weight: 700;
       font-size: 1rem;
@@ -776,7 +791,7 @@
     }
 
     footer {
-      background: #0d0806;
+      background: var(--surface-footer);
       border-top: 1px solid var(--border-ember);
       padding: 3rem 0 2rem;
       color: var(--text-muted);
@@ -794,7 +809,7 @@
       font-family: var(--font-heading);
       font-size: 1.3rem;
       font-weight: 900;
-      color: #fff;
+      color: var(--heading);
       margin-bottom: 0.5rem;
     }
 
@@ -803,7 +818,7 @@
       color: #999;
       margin-top: 1.5rem;
       padding-top: 1rem;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid rgba(var(--ink-rgb), 0.08);
       text-align: center;
     }
 
@@ -818,9 +833,386 @@
         display: none;
       }
     }
-  </style>
-<style>input[type="range"]{height:44px;min-height:44px;background:transparent;touch-action:pan-y}input[type="range"]::-webkit-slider-runnable-track{height:8px;border-radius:8px;background:#bf7045}input[type="range"]::-moz-range-track{height:8px;border-radius:8px;background:#bf7045}</style></head>
-<body>
+  
+    /* --- v4 (2026-09-14): dimensional smoker scene --- */
+    .smoker-3d-card { --smoke: 0.9; --smoke-dur: 6.5s; --heat: 1; --px: 0; --py: 0; overflow: hidden; position: relative; }
+    .smoker-3d-card::before {
+      content: ""; position: absolute; inset: -40% -20% auto -20%; height: 90%;
+      background: radial-gradient(ellipse at 70% 80%, rgba(255,107,53,calc(0.22 * var(--heat))), transparent 60%);
+      pointer-events: none; transition: opacity 0.6s;
+    }
+    .smoker-scene { position: relative; perspective: 900px; }
+    .smoker-svg-container { max-width: 480px; transform: translate3d(calc(var(--px) * 6px), calc(var(--py) * 4px), 0); transition: transform 0.35s ease-out; }
+    .smoker-svg-container svg { overflow: visible; }
+    .sk-puff, .sk-flame, .sk-spark, .sk-ember, .sk-heat { transform-box: fill-box; transform-origin: center; }
+    .sk-smoke { opacity: var(--smoke); transition: opacity 0.6s; transform: translate3d(calc(var(--px) * -10px), calc(var(--py) * -6px), 0); }
+    .sk-puff { animation: skRise var(--smoke-dur) linear infinite; }
+    @keyframes skRise {
+      0%   { transform: translate(0, 0) scale(0.45); opacity: 0; }
+      12%  { opacity: 0.9; }
+      60%  { transform: translate(18px, -78px) scale(1.5); opacity: 0.45; }
+      100% { transform: translate(42px, -150px) scale(2.4); opacity: 0; }
+    }
+    .sk-flame { animation: skFlicker 0.9s ease-in-out infinite alternate; transform-origin: 50% 100%; }
+    @keyframes skFlicker {
+      from { transform: scaleY(0.82) scaleX(1.05); opacity: 0.85; }
+      to   { transform: scaleY(1.12) scaleX(0.94); opacity: 1; }
+    }
+    .sk-ember { animation: skPulse 2.4s ease-in-out infinite; filter: drop-shadow(0 0 calc(10px * var(--heat)) rgba(255,107,53,0.9)); }
+    @keyframes skPulse { 0%,100% { opacity: 0.82; } 50% { opacity: 1; } }
+    .sk-heat { opacity: calc(0.55 * var(--heat)); animation: skBreathe 3.2s ease-in-out infinite; transition: opacity 0.6s; }
+    @keyframes skBreathe { 0%,100% { transform: scale(0.94); } 50% { transform: scale(1.06); } }
+    .sk-spark { animation: skSpark 2.2s ease-out infinite; opacity: 0; }
+    @keyframes skSpark {
+      0%   { transform: translate(0, 0); opacity: 0; }
+      15%  { opacity: 1; }
+      100% { transform: translate(calc(var(--heat) * 14px), -58px); opacity: 0; }
+    }
+    .smoker-3d-card[data-phase="ribs"]   { --smoke: 0.6;  --smoke-dur: 5s;   --heat: 1.3; }
+    .smoker-3d-card[data-phase="turkey"] { --smoke: 0.35; --smoke-dur: 3.8s; --heat: 1.7; }
+    .smoker-note { font-size: 0.85rem; color: var(--text-muted); margin: 0.85rem 0 0; line-height: 1.5; }
+    .temp-btn:focus-visible { outline: 3px solid var(--amber-gold); outline-offset: 2px; }
+    @media (hover: none) { .temp-btn:hover { background: rgba(var(--ink-rgb), 0.05); color: var(--text-muted); border-color: rgba(var(--ink-rgb), 0.15); } .temp-btn.active { background: var(--flame-orange); color: #fff; border-color: var(--flame-orange); } }
+    @media (max-width: 900px) { .smoker-svg-container { max-width: 420px; } .smoker-3d-card { padding: 1.5rem; } }
+    @media (max-width: 420px) { .temp-selector { flex-wrap: wrap; } .temp-btn { flex: 1 1 100%; } }
+    @media (prefers-reduced-motion: reduce) {
+      .sk-puff, .sk-flame, .sk-spark, .sk-ember, .sk-heat { animation: none !important; }
+      .sk-puff { opacity: 0.4; transform: translate(10px, -40px) scale(1.4); }
+      .sk-puff:nth-child(2) { transform: translate(26px, -95px) scale(2); opacity: 0.22; }
+      .sk-puff:nth-child(4) { transform: translate(4px, -12px) scale(0.9); opacity: 0.55; }
+      .sk-spark { opacity: 0; }
+      .smoker-svg-container, .sk-smoke { transition: none; transform: none; }
+    }
+
+    
+    /* --- v5 (2026-09-28) + v6 (2026-10-05): compact header that never collides with the inline-blend controls, page-owned light palette --- */
+    html { scroll-padding-top: calc(var(--nav-h, 76px) + 16px); }
+    .navbar { padding: 0.6rem 0; }
+    html { --sf-right: max(12px, calc((100vw - 1200px) / 2 + 1.5rem)); }
+    .navbar .nav-inner { min-height: 52px; padding-right: calc(var(--sf-w, 208px) + 36px); }
+    @media (max-width: 1151px) { .navbar .nav-inner { padding-right: calc(var(--sf-w, 208px) + 24px); } }
+    @media (max-width: 640px) { .navbar .nav-inner { min-height: 48px; padding-right: calc(var(--sf-w, 96px) + 24px); } }
+    .brand-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+    .brand-logo { min-width: 0; }
+    .brand-title { display: block; white-space: nowrap; line-height: 1.1; font-size: clamp(1.05rem, 1rem + 1.2vw, 1.5rem); }
+    .brand-tag { white-space: nowrap; line-height: 1.2; }
+    .nav-call { flex: 0 0 auto; white-space: nowrap; }
+    .nav-call-icon { width: 20px; height: 20px; fill: currentColor; display: none; }
+    @media (max-width: 900px) {
+      .nav-call { min-width: 44px; width: 44px; height: 44px; padding: 0; border-radius: 50%; }
+      .nav-call-icon { display: block; }
+      .nav-call-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+      .nav-inner { gap: 0.6rem; }
+      .brand-flame { width: 30px; height: 30px; }
+      .brand-logo { gap: 0.5rem; min-width: 0; }
+    }
+    @media (max-width: 640px) {
+      .brand-tag { display: none; }
+      .navbar { padding: 0.5rem 0; }
+      .nav-inner { min-height: 48px; }
+    }
+    @media (max-width: 400px) {
+      .brand-title { font-size: clamp(0.86rem, 4.1vw, 1rem); letter-spacing: -0.03em; }
+      .brand-flame { width: 28px; height: 28px; }
+      .brand-logo { gap: 0.4rem; }
+      .container { padding: 0 1rem; }
+      .navbar .nav-inner { padding-left: 0.75rem; gap: 0.5rem; }
+    }
+
+    /* foundation controls blended into the header lining */
+    html #sf-controls-root { top: var(--sf-top, 14px) !important; right: var(--sf-right) !important; max-width: calc(100vw - 24px) !important; }
+    #sf-controls-root .sf-controls-box { background: transparent !important; border: 0 !important; box-shadow: none !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; padding: 0 !important; gap: 8px !important; border-radius: 0 !important; }
+    #sf-controls-root .sf-btn { background: rgba(var(--ink-rgb), 0.08) !important; border: 1px solid var(--border-ember) !important; color: var(--text-main) !important; border-radius: 6px !important; min-height: 44px !important; min-width: 44px !important; padding: 0.55rem 0.9rem !important; font-family: var(--font-body) !important; font-size: 0.9rem !important; font-weight: 700 !important; letter-spacing: 0.01em !important; transition: border-color 0.2s, background 0.2s !important; }
+    #sf-controls-root .sf-btn:hover, #sf-controls-root .sf-btn:focus-visible { border-color: var(--flame-orange) !important; background: rgba(255,107,53,0.15) !important; color: var(--text-main) !important; box-shadow: none !important; }
+    #sf-controls-root .sf-btn:focus-visible { outline: 3px solid var(--amber-gold) !important; outline-offset: 2px !important; }
+    #sf-controls-root .sf-btn[aria-pressed="true"] { background: rgba(var(--ink-rgb), 0.08) !important; color: var(--text-main) !important; }
+    #sf-controls-root .sf-icon { color: var(--amber-text) !important; }
+    html[data-theme="dark"] #sf-controls-root .sf-btn, html[data-theme="light"] #sf-controls-root .sf-btn { background: rgba(var(--ink-rgb), 0.08) !important; color: var(--text-main) !important; border-color: var(--border-ember) !important; }
+    @media (max-width: 640px) {
+      #sf-controls-root .sf-btn { padding: 0 !important; width: 44px !important; }
+      #sf-controls-root .sf-btn-text { position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden !important; clip: rect(0 0 0 0) !important; white-space: nowrap !important; }
+      #sf-controls-root #sf-lang-btn::after { content: "ES"; font-family: var(--font-heading); font-weight: 800; font-size: 0.85rem; }
+      html[lang="es"] #sf-controls-root #sf-lang-btn::after { content: "EN"; }
+      #sf-controls-root #sf-lang-btn .sf-icon { display: none !important; }
+    }
+    @media (max-width: 640px) { html { --sf-right: 12px; } }
+
+    /* page-owned light palette: warm butcher-paper surfaces, ember accents kept, photos and smoker scene untouched */
+    html[data-theme="light"] {
+      --bg-dark: #f6efe5;
+      --bg-card: #fffaf3;
+      --bg-card-hover: #fff3e6;
+      --text-main: #23150f;
+      --text-muted: #5d4a3f;
+      --heading: #1a0e09;
+      --ink-rgb: 35, 21, 15;
+      --amber-text: #8a5200;
+      --nav-bg: rgba(250, 243, 233, 0.94);
+      --surface-story: #f0e5d6;
+      --surface-footer: #1a110d;
+      --surface-band: rgba(233, 219, 200, 0.55);
+      --surface-band-soft: rgba(233, 219, 200, 0.35);
+      --calc-bg: linear-gradient(135deg, rgba(255,107,53,0.12), rgba(255,250,243,0.95));
+      --calc-result-bg: rgba(255,255,255,0.7);
+      --shadow-deep: rgba(60, 30, 15, 0.25);
+      --border-ember: rgba(217, 90, 40, 0.35);
+      color-scheme: light;
+    }
+    html[data-theme="light"] footer { color: #d0c7be; }
+    html[data-theme="light"] footer .footer-brand { color: #ffffff; }
+    html[data-theme="light"] .hero { background: radial-gradient(circle at 70% 30%, rgba(255, 107, 53, 0.16) 0%, transparent 60%); }
+    html[data-theme="light"] .hero-badge { background: rgba(255, 183, 3, 0.18); border-color: rgba(200, 130, 0, 0.45); }
+    html[data-theme="light"] .floating-seal { border-color: #fffaf3; }
+    html[data-theme="light"] .smoker-3d-card { --text-muted: #d0c7be; --heading: #ffffff; --ink-rgb: 255, 255, 255; --amber-text: #ffb703; --border-ember: rgba(255, 107, 53, 0.25); color: #f8f9fa; box-shadow: inset 0 0 40px rgba(0,0,0,0.8), 0 15px 35px rgba(60, 30, 15, 0.3); }
+    html[data-theme="light"] .btn-secondary { background: rgba(var(--ink-rgb), 0.06); }
+    html[data-theme="light"] .calc-slider { background: rgba(var(--ink-rgb), 0.18); }
+    html[data-theme="light"] .menu-item-price { background: rgba(255,183,3,0.18); }
+    @media (prefers-reduced-motion: reduce) { #sf-controls-root .sf-btn { transition: none !important; } }
+
+    </style>
+<style>input[type="range"]{height:44px;min-height:44px;background:transparent;touch-action:pan-y}input[type="range"]::-webkit-slider-runnable-track{height:8px;border-radius:8px;background:#bf7045}input[type="range"]::-moz-range-track{height:8px;border-radius:8px;background:#bf7045}</style><meta content="1.0.0" data-site-foundation-tag="true" name="site-foundation-version"/>
+<script data-site-foundation-tag="true">
+(function(){try{var t=localStorage.getItem('sf_theme'),l=localStorage.getItem('sf_lang');if(t&&t!=='original')document.documentElement.setAttribute('data-theme',t);if(l)document.documentElement.setAttribute('lang',l);}catch(e){}})();
+</script>
+<style data-site-foundation-tag="true">
+/* site_foundation controls.css - Reusable Top-Right Boxed Theme & Language Controls */
+
+/* 1. Control Widget Boxed Container */
+#sf-controls-root,
+.sf-controls-root {
+  position: fixed !important;
+  top: 10px !important;
+  right: 12px !important;
+  z-index: 2147483647 !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  box-sizing: border-box !important;
+  line-height: 1 !important;
+  pointer-events: auto !important;
+}
+
+.sf-controls-box {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+  border: 1px solid rgba(0, 0, 0, 0.18) !important;
+  border-radius: 10px !important;
+  padding: 5px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  box-sizing: border-box !important;
+}html[data-theme="dark"] .sf-controls-box{
+  background: rgba(24, 24, 27, 0.94) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* 2. Control Buttons (>=44px touch targets) */
+.sf-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  min-height: 44px !important;
+  min-width: 44px !important;
+  padding: 8px 14px !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  border-radius: 8px !important;
+  background: rgba(243, 244, 246, 0.9) !important;
+  color: #1f2937 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  box-sizing: border-box !important;
+  transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease !important;
+  text-decoration: none !important;
+}html[data-theme="dark"] .sf-btn{
+  background: rgba(39, 39, 42, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  color: #f3f4f6 !important;
+}
+
+.sf-btn[aria-pressed="true"] {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  border-color: #1d4ed8 !important;
+  box-shadow: 0 0 0 1px #2563eb !important;
+}html[data-theme="dark"] .sf-btn[aria-pressed="true"]{
+  background: #3b82f6 !important;
+  color: #ffffff !important;
+  border-color: #60a5fa !important;
+}
+
+.sf-btn:focus-visible {
+  outline: 3px solid #2563eb !important;
+  outline-offset: 2px !important;
+}
+
+.sf-icon {
+  font-size: 16px !important;
+  line-height: 1 !important;
+  display: inline-block !important;
+}
+
+.sf-btn-text {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+}
+
+/* 3. Mobile Layout (360px viewport support) */
+@media (max-width: 480px) {
+  #sf-controls-root,
+  .sf-controls-root {
+    top: 6px !important;
+    right: 6px !important;
+    max-width: calc(100vw - 12px) !important;
+  }
+  .sf-controls-box {
+    gap: 4px !important;
+    padding: 3px !important;
+  }
+  .sf-btn {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    padding: 6px 10px !important;
+    font-size: 13px !important;
+  }
+  .sf-btn-text {
+    font-size: 13px !important;
+  }
+}
+
+/* 4. Top reservation (~60px) without hiding header / no CSS transform */
+body.sf-adjusted,
+html.sf-adjusted body {
+  padding-top: 60px !important;
+}
+/* Inline-blend mode (Brandon, Sept 14 2026): controls live inside the page's own header lining — no top reservation. */
+html[data-sf-inline-controls] body.sf-adjusted,
+html[data-sf-inline-controls] html.sf-adjusted body {
+  padding-top: 0 !important;
+}/* 5. Dark Mode Palette Overrides */
+html[data-theme="dark"]:not([data-sf-preserve-theme], [data-sf-preserve-theme] *){
+  color-scheme: dark !important;
+  background-color: #111827 !important;
+  color: #f3f4f6 !important;
+}html[data-theme="dark"] body{
+  background-color: #111827 !important;
+  color: #f3f4f6 !important;
+}/* Dark mode semantic content containers */
+html[data-theme="dark"] section:not([class*="hero"]):not([class*="banner"]):not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] article:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] main:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] aside:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] header:not([class*="hero"]):not([class*="banner"]):not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] footer:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] nav:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] .card:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] [class*="card"]:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] [class*="panel"]:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] [class*="box"]:not(.sf-controls-box),
+html[data-theme="dark"] [class*="container"]:not([class*="hero"]):not([class*="banner"]):not([class*="airflow"]):not([class*="air-stream"]):not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] [data-sf-dark-surface="true"]:not([data-sf-preserve-theme], [data-sf-preserve-theme] *){
+  background-color: #1f2937 !important;
+  color: #f3f4f6 !important;
+  border-color: #374151 !important;
+}/* Dark mode headings & text */
+html[data-theme="dark"] h1:not([class*="hero"]):not([class*="banner"]):not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] h2:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] h3:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] h4:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] h5:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] h6:not([data-sf-preserve-theme], [data-sf-preserve-theme] *){
+  color: #ffffff !important;
+}html[data-theme="dark"] p:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] li:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] td:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] th:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] label:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] span:not([class*="btn"]):not([class*="badge"]):not([class*="icon"]):not(.sf-btn-text):not(.sf-icon):not([data-sf-preserve-theme], [data-sf-preserve-theme] *){
+  color: #e5e7eb !important;
+}html[data-theme="dark"] a:not([class*="btn"]):not([class*="button"]):not(.sf-btn){
+  color: #60a5fa !important;
+}html[data-theme="dark"] a:not([class*="btn"]):not([class*="button"]):not(.sf-btn):hover{
+  color: #93c5fd !important;
+}/* Dark mode form controls & tables */
+html[data-theme="dark"] input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] select:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] textarea:not([data-sf-preserve-theme], [data-sf-preserve-theme] *){
+  background-color: #111827 !important;
+  color: #f9fafb !important;
+  border-color: #4b5563 !important;
+}html[data-theme="dark"] table:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] tr:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] td:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="dark"] th:not([data-sf-preserve-theme], [data-sf-preserve-theme] *){
+  background-color: #1f2937 !important;
+  color: #f3f4f6 !important;
+  border-color: #374151 !important;
+}/* 6. Light Mode Palette Overrides */
+html[data-theme="light"]:not([data-sf-preserve-theme], [data-sf-preserve-theme] *){
+  color-scheme: light !important;
+  background-color: #f9fafb !important;
+  color: #111827 !important;
+}html[data-theme="light"] body{
+  background-color: #f9fafb !important;
+  color: #111827 !important;
+}html[data-theme="light"] section:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="light"] article:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="light"] .card:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="light"] [class*="card"]:not([data-sf-preserve-theme], [data-sf-preserve-theme] *){
+  background-color: #ffffff !important;
+  color: #111827 !important;
+  border-color: #e5e7eb !important;
+}html[data-theme="light"] p:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="light"] li:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="light"] span:not([class*="btn"]):not([class*="icon"]):not(.sf-btn-text):not(.sf-icon),
+html[data-theme="light"] label:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="light"] td:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="light"] th:not([data-sf-preserve-theme], [data-sf-preserve-theme] *){
+  color: #374151 !important;
+}html[data-theme="light"] h1:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="light"] h2:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="light"] h3:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="light"] h4:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="light"] h5:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="light"] h6:not([data-sf-preserve-theme], [data-sf-preserve-theme] *){
+  color: #111827 !important;
+}
+
+/* 8. Reduced Motion & Hover Safeguards */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (hover: hover) {
+  .sf-btn:hover {
+    background: rgba(229, 231, 235, 1) !important;
+  }html[data-theme="dark"] .sf-btn:hover{
+    background: rgba(52, 52, 58, 1) !important;
+  }
+}html[data-theme="light"] p:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="light"] li:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="light"] td:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="light"] th:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="light"] label:not([data-sf-preserve-theme], [data-sf-preserve-theme] *),
+html[data-theme="light"] span:not(.sf-icon):not(.sf-btn-text),
+html[data-theme="light"] a:not([class*="btn"]):not([class*="button"]):not([class*="cta"]):not([data-sf-preserve-theme], [data-sf-preserve-theme] *){color:#243044!important}
+@media print{#sf-controls-root{display:none!important}body.sf-adjusted{padding-top:0!important}}
+
+</style></head>
+<body data-sf-preserve-theme="true">
 <header class="navbar">
 <div class="container nav-inner">
 <a aria-label="Flamin Bacon BBQ Home" class="brand-logo" href="#">
@@ -841,7 +1233,7 @@
 <li><a href="#visit">Hours &amp; Location</a></li>
 </ul>
 </nav>
-<a class="btn btn-primary" href="tel:9032844387">Call (903) 284-4387</a>
+<a aria-label="Call (903) 284-4387" class="btn btn-primary nav-call" href="tel:9032844387"><svg aria-hidden="true" class="nav-call-icon" focusable="false" viewbox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"></path></svg><span class="nav-call-text">Call (903) 284-4387</span></a>
 </div>
 </header>
 <main>
@@ -892,81 +1284,203 @@
 <section class="niche-visual-section" id="smoker">
 <div class="container">
 <h2 class="section-title">The Smokehouse Rig</h2>
-<p class="section-subtitle">Illustrative offset-smoker model — explore the visual smoke phases</p>
-<div class="smoker-3d-card card-3d-tilt">
+<p class="section-subtitle">Illustrative offset-smoker scene — pick a pit phase and watch the smoke, embers and gauge respond</p>
+<div class="smoker-3d-card card-3d-tilt" data-phase="brisket" id="smokerCard">
+<div class="smoker-scene">
 <div class="smoker-svg-container">
-<svg fill="none" viewbox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-<circle cx="200" cy="180" fill="url(#emberGlowGrad)" opacity="0.4" r="100"></circle>
-<rect fill="url(#metalGradDark)" height="60" rx="4" width="16" x="100" y="210"></rect>
-<rect fill="url(#metalGradDark)" height="60" rx="4" width="16" x="280" y="210"></rect>
-<circle cx="108" cy="270" fill="#111" r="14" stroke="#444" stroke-width="4"></circle>
-<circle cx="288" cy="270" fill="#111" r="14" stroke="#444" stroke-width="4"></circle>
-<rect fill="url(#fireboxGrad)" height="80" rx="8" stroke="#ff6b35" stroke-width="2" width="90" x="260" y="140"></rect>
-<circle cx="305" cy="180" fill="#111" r="22" stroke="#ffb703" stroke-width="2"></circle>
-<path d="M 295 180 Q 305 165 315 180 Q 305 195 295 180 Z" fill="url(#emberFireGrad)">
-<animate attributename="opacity" dur="2s" repeatcount="indefinite" values="0.6;1;0.6"></animate>
-</path>
-<rect fill="url(#smokerTankGrad)" height="110" rx="14" stroke="#555" stroke-width="2" width="200" x="70" y="100"></rect>
-<path d="M 70 145 H 270" stroke="rgba(255,255,255,0.15)" stroke-width="2"></path>
-<rect fill="url(#metalGradLight)" height="10" rx="4" stroke="#222" width="80" x="130" y="90"></rect>
-<circle cx="120" cy="115" fill="#fff" r="14" stroke="#d01c00" stroke-width="3"></circle>
-<circle cx="120" cy="115" fill="#1a1a1a" r="12"></circle>
-<line id="tempNeedle" stroke="#ffb703" stroke-width="2" x1="120" x2="128" y1="115" y2="108"></line>
-<circle cx="120" cy="115" fill="#ffb703" r="3"></circle>
-<rect fill="url(#metalGradDark)" height="75" rx="4" stroke="#333" width="22" x="85" y="30"></rect>
-<path d="M 80 30 L 96 18 L 112 30 Z" fill="#222"></path>
-<circle cx="96" cy="15" fill="rgba(200,200,200,0.3)" filter="blur(4px)" r="10">
-<animate attributename="cy" dur="3s" repeatcount="indefinite" values="15;-25"></animate>
-<animate attributename="opacity" dur="3s" repeatcount="indefinite" values="0.4;0"></animate>
-<animate attributename="r" dur="3s" repeatcount="indefinite" values="8;18"></animate>
-</circle>
+<svg aria-labelledby="smokerTitle" role="img" viewbox="0 0 520 360" xmlns="http://www.w3.org/2000/svg">
+<title id="smokerTitle">Illustrative offset smoker with animated smoke and ember glow</title>
 <defs>
-<radialgradient cx="50%" cy="50%" id="emberGlowGrad" r="50%">
-<stop offset="0%" stop-color="#ff6b35" stop-opacity="0.8"></stop>
-<stop offset="100%" stop-color="#120c0a" stop-opacity="0"></stop>
+<lineargradient id="skBarrel" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0" stop-color="#7a6a61"></stop>
+<stop offset="0.12" stop-color="#3a302b"></stop>
+<stop offset="0.45" stop-color="#1e1614"></stop>
+<stop offset="0.8" stop-color="#0f0a08"></stop>
+<stop offset="1" stop-color="#2a201c"></stop>
+</lineargradient>
+<lineargradient id="skBarrelSheen" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0" stop-color="#fff" stop-opacity="0"></stop>
+<stop offset="0.35" stop-color="#fff" stop-opacity="0.16"></stop>
+<stop offset="0.5" stop-color="#fff" stop-opacity="0.04"></stop>
+<stop offset="1" stop-color="#fff" stop-opacity="0"></stop>
+</lineargradient>
+<radialgradient cx="0.35" cy="0.4" id="skEndCap" r="0.75">
+<stop offset="0" stop-color="#4a3d37"></stop>
+<stop offset="0.6" stop-color="#1b1412"></stop>
+<stop offset="1" stop-color="#090605"></stop>
 </radialgradient>
-<lineargradient id="smokerTankGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-<stop offset="0%" stop-color="#3a3330"></stop>
-<stop offset="40%" stop-color="#1c1614"></stop>
-<stop offset="100%" stop-color="#0d0908"></stop>
+<lineargradient id="skFirebox" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0" stop-color="#5a2a1a"></stop>
+<stop offset="0.5" stop-color="#2a130c"></stop>
+<stop offset="1" stop-color="#140905"></stop>
 </lineargradient>
-<lineargradient id="fireboxGrad" x1="0%" x2="100%" y1="0%" y2="100%">
-<stop offset="0%" stop-color="#4a2015"></stop>
-<stop offset="100%" stop-color="#1c0b06"></stop>
+<radialgradient cx="0.5" cy="0.6" id="skEmber" r="0.6">
+<stop offset="0" stop-color="#fff2b3"></stop>
+<stop offset="0.25" stop-color="#ffb703"></stop>
+<stop offset="0.6" stop-color="#ff6b35"></stop>
+<stop offset="1" stop-color="#7a1200"></stop>
+</radialgradient>
+<radialgradient cx="0.5" cy="0.5" id="skHeatGlow" r="0.5">
+<stop offset="0" stop-color="#ff6b35" stop-opacity="0.75"></stop>
+<stop offset="0.5" stop-color="#ff6b35" stop-opacity="0.22"></stop>
+<stop offset="1" stop-color="#ff6b35" stop-opacity="0"></stop>
+</radialgradient>
+<lineargradient id="skFlame" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0" stop-color="#fff2b3"></stop>
+<stop offset="0.4" stop-color="#ffb703"></stop>
+<stop offset="0.75" stop-color="#ff6b35"></stop>
+<stop offset="1" stop-color="#c81d00"></stop>
 </lineargradient>
-<lineargradient id="emberFireGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-<stop offset="0%" stop-color="#ffb703"></stop>
-<stop offset="50%" stop-color="#ff6b35"></stop>
-<stop offset="100%" stop-color="#d01c00"></stop>
+<lineargradient id="skSteel" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0" stop-color="#1c1c1c"></stop>
+<stop offset="0.4" stop-color="#6b6b6b"></stop>
+<stop offset="0.6" stop-color="#3a3a3a"></stop>
+<stop offset="1" stop-color="#101010"></stop>
 </lineargradient>
-<lineargradient id="metalGradDark" x1="0%" x2="100%" y1="0%" y2="0%">
-<stop offset="0%" stop-color="#2a2a2a"></stop>
-<stop offset="50%" stop-color="#555555"></stop>
-<stop offset="100%" stop-color="#111111"></stop>
+<lineargradient id="skSteelV" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0" stop-color="#8a8a8a"></stop>
+<stop offset="0.5" stop-color="#2c2c2c"></stop>
+<stop offset="1" stop-color="#151515"></stop>
 </lineargradient>
-<lineargradient id="metalGradLight" x1="0%" x2="0%" y1="0%" y2="100%">
-<stop offset="0%" stop-color="#cccccc"></stop>
-<stop offset="100%" stop-color="#666666"></stop>
+<lineargradient id="skWood" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0" stop-color="#6b3f1f"></stop>
+<stop offset="0.5" stop-color="#a86a35"></stop>
+<stop offset="1" stop-color="#4a2a12"></stop>
 </lineargradient>
+<radialgradient cx="0.5" cy="0.5" id="skPuff" r="0.5">
+<stop offset="0" stop-color="#e9e2da" stop-opacity="0.85"></stop>
+<stop offset="0.6" stop-color="#cfc6bd" stop-opacity="0.35"></stop>
+<stop offset="1" stop-color="#cfc6bd" stop-opacity="0"></stop>
+</radialgradient>
+<radialgradient cx="0.5" cy="0.5" id="skShadow" r="0.5">
+<stop offset="0" stop-color="#000" stop-opacity="0.7"></stop>
+<stop offset="1" stop-color="#000" stop-opacity="0"></stop>
+</radialgradient>
+<clippath id="skVentClip"><circle cx="386" cy="238" r="22"></circle></clippath>
 </defs>
+<!-- ground shadow + heat glow -->
+<ellipse class="sk-ground" cx="270" cy="332" fill="url(#skShadow)" rx="215" ry="18"></ellipse>
+<ellipse class="sk-heat" cx="386" cy="300" fill="url(#skHeatGlow)" rx="120" ry="42"></ellipse>
+<!-- smoke plumes (CSS animated) -->
+<g class="sk-smoke" fill="url(#skPuff)">
+<circle class="sk-puff" cx="118" cy="52" r="16"></circle>
+<circle class="sk-puff" cx="126" cy="50" r="13" style="animation-delay:-1.4s"></circle>
+<circle class="sk-puff" cx="110" cy="54" r="19" style="animation-delay:-2.9s"></circle>
+<circle class="sk-puff" cx="122" cy="48" r="11" style="animation-delay:-4.1s"></circle>
+<circle class="sk-puff" cx="114" cy="52" r="15" style="animation-delay:-5.3s"></circle>
+</g>
+<!-- rear legs (depth) -->
+<rect fill="#171210" height="70" rx="4" width="10" x="108" y="250"></rect>
+<rect fill="#171210" height="70" rx="4" width="10" x="270" y="250"></rect>
+<!-- chimney -->
+<rect fill="url(#skSteel)" height="120" rx="5" stroke="#0a0a0a" stroke-width="1.5" width="30" x="103" y="58"></rect>
+<rect fill="url(#skSteelV)" height="12" rx="3" width="44" x="96" y="50"></rect>
+<rect fill="#0b0b0b" height="4" opacity="0.8" rx="2" width="30" x="103" y="62"></rect>
+<!-- main cook chamber -->
+<rect fill="url(#skBarrel)" height="118" rx="59" stroke="#050302" stroke-width="1.5" width="262" x="62" y="152"></rect>
+<rect fill="url(#skBarrelSheen)" height="118" rx="59" width="262" x="62" y="152"></rect>
+<!-- lid seam + trim -->
+<path d="M 74 211 H 316" stroke="rgba(var(--ink-rgb), 0.22)" stroke-width="2"></path>
+<path d="M 74 214 H 316" stroke="rgba(0,0,0,0.6)" stroke-width="2"></path>
+<!-- end cap (left, angled toward viewer) -->
+<ellipse cx="66" cy="211" fill="url(#skEndCap)" rx="24" ry="59" stroke="#0a0705" stroke-width="1.5"></ellipse>
+<ellipse cx="66" cy="211" fill="none" rx="17" ry="50" stroke="rgba(var(--ink-rgb), 0.12)" stroke-width="1.5"></ellipse>
+<!-- lid handle with wood grip -->
+<path d="M 150 158 v -14 h 90 v 14" fill="none" stroke="url(#skSteelV)" stroke-linecap="round" stroke-width="6"></path>
+<rect fill="url(#skWood)" height="10" rx="5" width="70" x="160" y="139"></rect>
+<!-- rivets -->
+<g fill="#8b8079" opacity="0.8">
+<circle cx="92" cy="166" r="2.2"></circle><circle cx="300" cy="166" r="2.2"></circle>
+<circle cx="92" cy="256" r="2.2"></circle><circle cx="300" cy="256" r="2.2"></circle>
+</g>
+<!-- brand plaque -->
+<rect fill="#0b0705" height="26" rx="6" stroke="#ff6b35" stroke-opacity="0.6" stroke-width="1.5" width="88" x="196" y="224"></rect>
+<path d="M 240 230 c -6 6 -8 10 -6 14 c 2 4 8 5 10 0 c 2 -4 0 -8 -4 -14 z" fill="#ff6b35"></path>
+<path d="M 240 236 c -2 3 -3 5 -2 7 c 1 2 4 2 5 0 c 1 -2 0 -4 -3 -7 z" fill="#ffb703"></path>
+<!-- gauge -->
+<g class="sk-gauge">
+<circle cx="130" cy="188" fill="#0f0d0c" r="24" stroke="#c9c2bb" stroke-width="3"></circle>
+<circle cx="130" cy="188" fill="none" r="19" stroke="#3a3330" stroke-width="1"></circle>
+<path d="M 113 195 A 18 18 0 0 1 130 170" fill="none" stroke="#ffb703" stroke-linecap="round" stroke-width="3"></path>
+<path d="M 130 170 A 18 18 0 0 1 147 195" fill="none" stroke="#e63946" stroke-linecap="round" stroke-width="3"></path>
+<g id="tempNeedle" transform="rotate(-40 130 188)">
+<path d="M 130 190 L 128 188 L 130 171 L 132 188 Z" fill="#fff"></path>
+</g>
+<circle cx="130" cy="188" fill="#ffb703" r="3.2"></circle>
+<text fill="#f8f9fa" font-family="Bitter, Georgia, serif" font-size="11" font-weight="700" id="gaugeReadout" text-anchor="middle" x="130" y="206">225°F</text>
+</g>
+<!-- connector collar -->
+<rect fill="url(#skSteelV)" height="38" rx="6" stroke="#050302" stroke-width="1" width="26" x="318" y="222"></rect>
+<!-- firebox -->
+<rect class="sk-firebox" fill="url(#skFirebox)" height="96" rx="9" stroke="#ff6b35" stroke-opacity="0.55" stroke-width="1.5" width="118" x="336" y="190"></rect>
+<rect fill="url(#skBarrelSheen)" height="96" opacity="0.5" rx="9" width="118" x="336" y="190"></rect>
+<path d="M 344 198 H 446" stroke="rgba(var(--ink-rgb), 0.14)" stroke-width="1.5"></path>
+<!-- firebox chimney vent lever -->
+<rect fill="url(#skSteelV)" height="8" rx="4" width="40" x="400" y="180"></rect>
+<!-- ember window -->
+<circle cx="386" cy="238" fill="#120806" r="26" stroke="#c9c2bb" stroke-width="3"></circle>
+<circle class="sk-ember" cx="386" cy="238" fill="url(#skEmber)" r="22"></circle>
+<g class="sk-flames" clip-path="url(#skVentClip)" fill="url(#skFlame)">
+<path class="sk-flame" d="M 374 262 c -4 -14 2 -22 8 -30 c 0 10 6 12 6 20 c 0 6 -4 10 -7 10 z"></path>
+<path class="sk-flame" d="M 386 262 c -6 -16 2 -26 10 -36 c -2 12 8 16 8 26 c 0 6 -5 10 -9 10 z" style="animation-delay:-0.45s"></path>
+<path class="sk-flame" d="M 398 262 c -4 -12 0 -20 6 -26 c 0 8 5 12 5 18 c 0 5 -3 8 -5 8 z" style="animation-delay:-0.9s"></path>
+</g>
+<!-- door hinge + latch -->
+<rect fill="#c9c2bb" height="12" rx="2" width="4" x="426" y="214"></rect>
+<rect fill="#c9c2bb" height="12" rx="2" width="4" x="426" y="256"></rect>
+<rect fill="url(#skSteelV)" height="6" rx="3" width="22" x="418" y="238"></rect>
+<!-- sparks -->
+<g class="sk-sparks" fill="#ffb703">
+<circle class="sk-spark" cx="380" cy="212" r="1.6"></circle>
+<circle class="sk-spark" cx="392" cy="214" r="1.3" style="animation-delay:-0.7s"></circle>
+<circle class="sk-spark" cx="386" cy="210" r="1.8" style="animation-delay:-1.3s"></circle>
+<circle class="sk-spark" cx="398" cy="216" r="1.2" style="animation-delay:-1.9s"></circle>
+</g>
+<!-- front legs + wheels -->
+<rect fill="url(#skSteel)" height="66" rx="4" stroke="#050302" stroke-width="1" width="12" x="96" y="258"></rect>
+<rect fill="url(#skSteel)" height="66" rx="4" stroke="#050302" stroke-width="1" width="12" x="284" y="258"></rect>
+<g class="sk-wheel">
+<circle cx="102" cy="322" fill="#0e0e0e" r="20" stroke="#5a5a5a" stroke-width="5"></circle>
+<circle cx="102" cy="322" fill="none" r="8" stroke="#8a8a8a" stroke-width="2"></circle>
+<path d="M 102 304 V 340 M 84 322 H 120 M 89 309 L 115 335 M 115 309 L 89 335" stroke="#6a6a6a" stroke-width="2"></path>
+<circle cx="102" cy="322" fill="#ffb703" r="3"></circle>
+</g>
+<g class="sk-wheel">
+<circle cx="290" cy="322" fill="#0e0e0e" r="20" stroke="#5a5a5a" stroke-width="5"></circle>
+<circle cx="290" cy="322" fill="none" r="8" stroke="#8a8a8a" stroke-width="2"></circle>
+<path d="M 290 304 V 340 M 272 322 H 308 M 277 309 L 303 335 M 303 309 L 277 335" stroke="#6a6a6a" stroke-width="2"></path>
+<circle cx="290" cy="322" fill="#ffb703" r="3"></circle>
+</g>
+<!-- firebox feet -->
+<rect fill="url(#skSteel)" height="40" rx="3" width="10" x="346" y="284"></rect>
+<rect fill="url(#skSteel)" height="40" rx="3" width="10" x="434" y="284"></rect>
+<!-- wood pile -->
+<g class="sk-logs">
+<rect fill="url(#skWood)" height="16" rx="8" transform="rotate(-8 480 300)" width="56" x="452" y="296"></rect>
+<ellipse cx="453" cy="302" fill="#e0b98a" rx="6" ry="8" transform="rotate(-8 480 300)"></ellipse>
+<rect fill="url(#skWood)" height="16" rx="8" transform="rotate(6 480 318)" width="60" x="450" y="312"></rect>
+<ellipse cx="451" cy="320" fill="#e0b98a" rx="6" ry="8" transform="rotate(6 480 318)"></ellipse>
+</g>
 </svg>
+</div>
 </div>
 <div class="smoker-controls">
 <div class="smoker-stat-box">
-<div class="smoker-stat-title">Wood Fuel</div>
-<div class="smoker-stat-value">East Texas Post Oak</div>
+<div class="smoker-stat-title">Classic Texas Wood</div>
+<div class="smoker-stat-value">Post Oak (illustrative)</div>
 </div>
 <div class="smoker-stat-box">
 <div class="smoker-stat-title">Target Pit Temp</div>
 <div class="smoker-stat-value" id="currentTempDisplay">225°F (Low &amp; Slow)</div>
 </div>
 <div>
-<div class="smoker-stat-title" style="margin-bottom:0.5rem">Select Smoke Phase:</div>
-<div class="temp-selector">
-<button class="temp-btn active" onclick="setSmokerTemp('225°F (Low &amp; Slow)', 108, this)">225°F Brisket</button>
-<button class="temp-btn" onclick="setSmokerTemp('250°F (Rib Glaze)', 120, this)">250°F Ribs</button>
-<button class="temp-btn" onclick="setSmokerTemp('275°F (Bacon Crisp)', 132, this)">275°F Turkey</button>
+<div class="smoker-stat-title" id="phaseLabel" style="margin-bottom:0.5rem">Select Smoke Phase:</div>
+<div aria-labelledby="phaseLabel" class="temp-selector" role="group">
+<button aria-pressed="true" class="temp-btn active" onclick="setSmokerTemp('225°F (Low &amp; Slow)', '225°F', -40, 'brisket', this)" type="button">225°F Brisket</button>
+<button aria-pressed="false" class="temp-btn" onclick="setSmokerTemp('250°F (Rib Glaze)', '250°F', 5, 'ribs', this)" type="button">250°F Ribs</button>
+<button aria-pressed="false" class="temp-btn" onclick="setSmokerTemp('275°F (Bacon Crisp)', '275°F', 50, 'turkey', this)" type="button">275°F Turkey</button>
 </div>
+<p class="smoker-note">Smoke thickens at low temperatures and thins as the pit runs hotter — a visual illustration, not a cooking guide.</p>
 </div>
 </div>
 </div>
@@ -1182,15 +1696,70 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    function setSmokerTemp(tempText, needleDeg, button) {
-      document.getElementById('currentTempDisplay').innerText = tempText;
-      const needle = document.getElementById('tempNeedle');
-      if (needle) {
-        needle.setAttribute('transform', `rotate(${needleDeg - 108} 120 115)`);
+
+    (function () {
+      var root = document.documentElement;
+      var nav = document.querySelector('.navbar');
+      function measure() {
+        if (nav) {
+          var h = nav.offsetHeight;
+          root.style.setProperty('--nav-h', h + 'px');
+          root.style.setProperty('--sf-top', Math.max(6, Math.round((h - 44) / 2)) + 'px');
+        }
+        var box = document.getElementById('sf-controls-root');
+        if (box) root.style.setProperty('--sf-w', Math.ceil(box.getBoundingClientRect().width) + 'px');
       }
-      document.querySelectorAll('.temp-btn').forEach(btn => btn.classList.remove('active'));
-      if (button) button.classList.add('active');
+      measure();
+      window.addEventListener('resize', measure);
+      window.addEventListener('load', measure);
+      document.addEventListener('DOMContentLoaded', function () { measure(); setTimeout(measure, 60); });
+      if (window.ResizeObserver) {
+        var ro = new ResizeObserver(measure);
+        if (nav) ro.observe(nav);
+        var tries = 0, t = setInterval(function () {
+          var box = document.getElementById('sf-controls-root');
+          if (box) { ro.observe(box); measure(); clearInterval(t); }
+          else if (++tries > 50) clearInterval(t);
+        }, 40);
+      } else if (window.MutationObserver) {
+        new MutationObserver(measure).observe(root, { attributes: true, attributeFilter: ['lang', 'data-theme'] });
+      }
+    })();
+
+    function setSmokerTemp(tempText, readout, needleDeg, phase, button) {
+      var display = document.getElementById('currentTempDisplay');
+      if (display) display.textContent = tempText;
+      var gauge = document.getElementById('gaugeReadout');
+      if (gauge) gauge.textContent = readout;
+      var needle = document.getElementById('tempNeedle');
+      if (needle) needle.setAttribute('transform', 'rotate(' + needleDeg + ' 130 188)');
+      var card = document.getElementById('smokerCard');
+      if (card) card.setAttribute('data-phase', phase);
+      document.querySelectorAll('.temp-btn').forEach(function (btn) {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-pressed', 'false');
+      });
+      if (button) { button.classList.add('active'); button.setAttribute('aria-pressed', 'true'); }
     }
+
+    (function () {
+      var card = document.getElementById('smokerCard');
+      if (!card || !window.matchMedia) return;
+      var fine = matchMedia('(hover:hover) and (pointer:fine)');
+      var reduce = matchMedia('(prefers-reduced-motion:reduce)');
+      card.addEventListener('mousemove', function (e) {
+        if (!fine.matches || reduce.matches) return;
+        var r = card.getBoundingClientRect();
+        var px = ((e.clientX - r.left) / r.width - 0.5) * 2;
+        var py = ((e.clientY - r.top) / r.height - 0.5) * 2;
+        card.style.setProperty('--px', px.toFixed(3));
+        card.style.setProperty('--py', py.toFixed(3));
+      });
+      card.addEventListener('mouseleave', function () {
+        card.style.setProperty('--px', '0');
+        card.style.setProperty('--py', '0');
+      });
+    })();
 
     function updateFeastCalc(val) {
       document.getElementById('peopleVal').innerText = val + (val == 1 ? ' Person' : ' People');
@@ -1200,5 +1769,573 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('calcSides').innerText = pints + (pints == 1 ? ' Pint' : ' Pints');
     }
   </script>
-</body>
+<script data-site-foundation-tag="true" id="sf-translations-data" type="application/json">
+{
+  "Call to Order": "Llamar para pedir",
+  "Closed": "Cerrado",
+  "Facebook": "Facebook",
+  "From the Menu": "Del menú",
+  "Get Directions": "Cómo llegar",
+  "Open in Google Maps": "Abrir en Google Maps",
+  "Our Story": "Nuestra historia",
+  "Pro": "Pro",
+  "Sunday – Wednesday": "Domingo – miércoles",
+  "Thursday – Saturday": "Jueves – sábado",
+  "Yelp": "Yelp",
+  "html": "html",
+  "Menu": "Menú",
+  "2 Pints": "2 pintas",
+  "2.0 lbs": "2.0 libras",
+  "225°F Brisket": "225°F Pecho de res",
+  "250°F Ribs": "250°F Costillas",
+  "275°F Turkey": "275°F Pavo",
+  "225°F (Low & Slow)": "225°F (A fuego lento)",
+  "3D Smoker": "Ahumador 3D",
+  "Bacon-Wrapped Turkey": "Pavo envuelto en tocino",
+  "Bacon-Wrapped Turkey Breast": "Pechuga de pavo envuelta en tocino",
+  "PITMASTER RICHARD KINCADE": "MAESTRO PARRILLERO RICHARD KINCADE",
+  "Pitmaster Richard Kincade": "Maestro parrillero Richard Kincade",
+  "Pitmaster Signature": "Especialidad del maestro parrillero",
+  "Platters": "Platos",
+  "Texas Brisket Plate": "Plato de pecho de res al estilo de Texas",
+  "The Smokehouse Rig": "El ahumador",
+  "Person": "persona",
+  "People": "personas",
+  "Pint": "pinta",
+  "Pints": "pintas",
+  "lbs": "libras",
+  "(Bacon Mac & Cheese / Slaw)": "(Macarrones con queso y tocino / Ensalada de col)",
+  "(Bacon-Wrapped Turkey & Brisket)": "(Pavo envuelto en tocino y pecho de res)",
+  "(hover:hover) and (pointer:fine)": "(hover:hover) and (pointer:fine)",
+  "(prefers-reduced-motion:reduce)": "(preferidos-reduced-motion:reduce)",
+  "0px": "0px",
+  "4 People": "4 personas",
+  "405 W Larissa St": "405 W Larissa St",
+  "405 W Larissa St, Jacksonville, TX 75766": "405 W Larissa St, Jacksonville, TX 75766",
+  "A": "A",
+  "A meal disguised as a side — three-cheese blend folded with smoked bacon chunks and panko crust.": "Una comida completa disfrazada de acompañamiento: mezcla de tres quesos con trozos de tocino ahumado y costra de panko.",
+  "All Items": "Todo el menú",
+  "Ask for pricing": "Pregunta el precio",
+  "B": "B",
+  "BBQ Party & Feast Estimator": "Calculadora de porciones para fiestas y reuniones",
+  "Bacon-Loaded Mac & Cheese": "Macarrones con queso cargados de tocino",
+  "Birthplace of the": "La cuna del",
+  "C": "C",
+  "Call (903) 284-4387": "Llamar (903) 284-4387",
+  "Call Ahead & Orders": "Llama antes y haz tu pedido",
+  "Call ahead to hold orders before 1 PM!": "¡Llama antes de la 1 PM para reservar tu pedido!",
+  "Call for current hours": "Llama para confirmar el horario",
+  "Central Texas style oak-smoked beef brisket, hand-sliced with dark savory bark. Includes two sides.": "Pecho de res ahumado con roble al estilo del centro de Texas, rebanado a mano y con una corteza oscura y sabrosa. Incluye dos acompañamientos.",
+  "Contact": "Contacto",
+  "DOMContentLoaded": "DOMContentLoaded",
+  "Estimated Meat:": "Carne estimada:",
+  "Explore Menu": "Ver el menú",
+  "Find Us in Jacksonville": "Encuéntranos en Jacksonville",
+  "Flamin Bacon BBQ": "Flamin Bacon BBQ",
+  "Flamin Bacon BBQ Home": "Inicio de Flamin Bacon BBQ",
+  "Flamin Bacon BBQ Pitmaster Specialties": "Especialidades del maestro parrillero de Flamin Bacon BBQ",
+  "Flamin Bacon BBQ Sandwich": "Sándwich de Flamin Bacon BBQ",
+  "Flamin Bacon BBQ | Birthplace of the Bacon-Wrapped Turkey | Jacksonville, TX": "Flamin Bacon BBQ | La cuna del pavo envuelto en tocino | Jacksonville, TX",
+  "For current details, call the business": "Para información actualizada, llama al negocio",
+  "Fork-tender, glazed St. Louis cut pork ribs smoked over post oak logs until tender off the bone.": "Costillas de cerdo corte St. Louis, glaseadas y ahumadas con leña de roble hasta quedar tan tiernas que se desprenden del hueso.",
+  "Founded and run by local pitmaster Richard Kincade, Flamin Bacon gained fame as the birthplace of the bacon-wrapped turkey. This distinct Jacksonville smokehouse serves small-batch Texas barbecue, smoked meats, and custom bacon creations — and when it's gone, it's gone.": "Fundado y dirigido por el maestro parrillero local Richard Kincade, Flamin Bacon se hizo famoso como la cuna del pavo envuelto en tocino. Este singular ahumadero de Jacksonville sirve barbacoa texana en pequeñas tandas, carnes ahumadas y creaciones personalizadas con tocino; y cuando se acaba, se acaba.",
+  "Hours & Location": "Horario y ubicación",
+  "Illustrative menu layout — call for current dishes, prices and availability": "Diseño de menú ilustrativo: llama para conocer los platos, precios y disponibilidad actuales",
+  "Independent design concept. Not an official business website. Illustrative imagery.": "Concepto de diseño independiente. No es el sitio web oficial del negocio. Imágenes ilustrativas.",
+  "Jacksonville, TX 75766": "Jacksonville, TX 75766",
+  "Jacksonville, Texas Smokehouse": "Ahumadero de Jacksonville, Texas",
+  "Links": "Enlaces",
+  "Main Navigation": "Navegación principal",
+  "Menu concept": "Concepto de menú",
+  "Number of Guests:": "Número de invitados:",
+  "Piled high on a toasted brioche bun with crispy bacon strips, house sauce, and pickles.": "Servido bien colmado en un pan brioche tostado con tiras de tocino crujiente, salsa de la casa y pepinillos.",
+  "Pitmaster Richard Kincade's small-batch Texas smokehouse — smoked meats and custom bacon creations. When it's gone, it's gone!": "El ahumadero texano en pequeñas tandas del maestro parrillero Richard Kincade: carnes ahumadas y creaciones personalizadas con tocino. ¡Cuando se acaba, se acaba!",
+  "Pitmaster Richard Kincade's small-batch Texas smokehouse. Home of the famous Bacon-Wrapped Turkey in Jacksonville, TX.": "El ahumadero texano en pequeñas tandas del maestro parrillero Richard Kincade. Hogar del famoso pavo envuelto en tocino en Jacksonville, TX.",
+  "Planning to feed a group or family gathering? Explore a sample portion-planning guide.": "¿Vas a dar de comer a un grupo o a una reunión familiar? Explora esta guía de ejemplo para calcular porciones.",
+  "Recommended Sides:": "Acompañamientos recomendados:",
+  "Select Smoke Phase:": "Elige la fase de ahumado:",
+  "Sides & Extras": "Acompañamientos y extras",
+  "Slow Smoked": "Ahumado lento",
+  "Small-batch smokehouse from pitmaster Richard Kincade — home of the bacon-wrapped turkey.": "Ahumadero en pequeñas tandas del maestro parrillero Richard Kincade: hogar del pavo envuelto en tocino.",
+  "Smoked Meats": "Carnes ahumadas",
+  "Smoked Pork Ribs Platter": "Plato de costillas de cerdo ahumadas",
+  "Smoked Slow Over Post Oak": "Ahumado lento con leña de roble",
+  "Smokehouse Hours": "Horario del ahumadero",
+  "Target Pit Temp": "Temperatura objetivo del pit",
+  "The signature — smoked slow, wrapped in thick cut bacon with pitmaster seasoning glaze.": "La especialidad de la casa: ahumada lentamente, envuelta en tocino de corte grueso y glaseada con el sazón del maestro parrillero.",
+  "Tip:": "Consejo:",
+  "active": "activo activo",
+  "all": "Todos todos",
+  "aria-controls": "aria-controls",
+  "aria-expanded": "aria-expanded",
+  "calcMeat": "CalcMeat",
+  "calcSides": "calcSides",
+  "click": "clic",
+  "currentTempDisplay": "corrienteTempDisplay",
+  "false": "falso",
+  "flex": "flex",
+  "mouseleave": "mouseleave",
+  "mousemove": "mousemove",
+  "none": "ninguno",
+  "peopleVal": "genteVal",
+  "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)": "Perspectivas1000px) rotateX(0deg) rotativa(0b) Escala3d(1, 1, 1)",
+  "px": "px",
+  "tempNeedle": "tempNeedle",
+  "transform": "transformación",
+  "true": "verdadero",
+  "· Jacksonville, TX": "· Jacksonville, TX",
+  "★ 4.6 Rating (45 Reviews)": "★ Calificación 4.6 (45 reseñas)",
+  "250°F (Rib Glaze)": "250°F (Glaseado de costillas)",
+  "275°F (Bacon Crisp)": "275°F (Tocino crujiente)",
+  "225°F": "225°F",
+  "250°F": "250°F",
+  "275°F": "275°F",
+  "Classic Texas Wood": "Leña clásica de Texas",
+  "Post Oak (illustrative)": "Roble post oak (ilustrativo)",
+  "Illustrative offset-smoker scene — pick a pit phase and watch the smoke, embers and gauge respond": "Escena ilustrativa de un ahumador offset: elige una fase del pit y observa cómo responden el humo, las brasas y el termómetro",
+  "Illustrative offset smoker with animated smoke and ember glow": "Ahumador offset ilustrativo con humo animado y brasas encendidas",
+  "Smoke thickens at low temperatures and thins as the pit runs hotter — a visual illustration, not a cooking guide.": "El humo se espesa a bajas temperaturas y se aligera cuando el pit está más caliente; es una ilustración visual, no una guía de cocina."
+}
+</script>
+<div aria-label="Appearance and Language Controls" class="sf-controls-root" data-site-foundation-tag="true" id="sf-controls-root" role="region">
+<div class="sf-controls-box">
+<button aria-label="Toggle theme, current original" aria-pressed="false" class="sf-btn sf-btn-theme" id="sf-theme-btn" tabindex="0" type="button">
+<span aria-hidden="true" class="sf-icon">🌙</span>
+<span class="sf-btn-text" id="sf-theme-text">Dark</span>
+</button>
+<button aria-label="Cambiar idioma a Español" aria-pressed="false" class="sf-btn sf-btn-lang" id="sf-lang-btn" tabindex="0" type="button">
+<span aria-hidden="true" class="sf-icon">🌐</span>
+<span class="sf-btn-text" id="sf-lang-text">Español</span>
+</button>
+</div>
+</div>
+<script data-site-foundation-tag="true">
+/* site_foundation controls.js - Reusable Dynamic Theme & Language Engine */
+(function () {
+  'use strict';
+
+  // 1. Guarded LocalStorage Access
+  function safeGet(key) {
+    try {
+      return window.localStorage ? window.localStorage.getItem(key) : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function safeSet(key, val) {
+    try {
+      if (window.localStorage) {
+        window.localStorage.setItem(key, val);
+      }
+    } catch (e) {}
+  }
+
+  // 2. Initial State
+  // Dark-native pages (Sept 28, 2026) declare data-sf-native-theme="dark" on <html> so the first toggle goes
+  // to light and the button label reads correctly; the native value is not written to storage until the visitor chooses.
+  var savedTheme = safeGet('sf_theme');
+  var nativeTheme = (document.documentElement.getAttribute('data-sf-native-theme') || '').toLowerCase();
+  if (nativeTheme !== 'dark' && nativeTheme !== 'light') nativeTheme = '';
+  var currentTheme = savedTheme || nativeTheme || 'original'; // 'original', 'dark', 'light'
+  var currentLang = safeGet('sf_lang') || 'en'; // 'en', 'es'
+
+  // 3. Translations Dictionary Initialization
+  var exactMap = {};
+  var normMap = {};
+
+  function initTranslations() {
+    var elem = document.getElementById('sf-translations-data');
+    if (!elem) return;
+    try {
+      var raw = JSON.parse(elem.textContent || '{}');
+      for (var k in raw) {
+        if (Object.prototype.hasOwnProperty.call(raw, k)) {
+          var val = raw[k];
+          exactMap[k] = val;
+          var trimmed = k.trim().replace(/\s+/g, ' ');
+          if (trimmed) {
+            exactMap[trimmed] = val;
+            normMap[trimmed.toLowerCase()] = val;
+          }
+        }
+      }
+    } catch (e) {
+      console.warn('site_foundation: Failed to parse translations JSON', e);
+    }
+  }
+
+  // Helper to protect phone numbers, URLs, emails, addresses, numbers, and brand identity
+  function isProtected(str) {
+    if (!str) return true;
+    var trimmed = str.trim();
+    // Phone numbers (e.g. (903) 284-4387, +1-800-555-0199)
+    if (/^\+?\d[\d\s\-().]{6,}\d$/.test(trimmed)) return true;
+    // URLs or email/tel links
+    if (/^(https?:\/\/|mailto:|tel:|\/)/.test(trimmed)) return true;
+    // Pure numbers
+    if (/^\$?[\d,.]+%?$/.test(trimmed)) return true;
+    // Identity mapping (value equals key)
+    if (exactMap[trimmed] && exactMap[trimmed] === trimmed) return true;
+    return false;
+  }
+
+  // Look up translation in dictionary
+  function getTranslation(str) {
+    if (!str) return null;
+    var trimmed = str.trim().replace(/\s+/g, ' ');
+    if (isProtected(trimmed)) return null;
+    if (exactMap[str]) return exactMap[str];
+    if (exactMap[trimmed]) return exactMap[trimmed];
+    var lower = trimmed.toLowerCase();
+    if (normMap[lower]) return normMap[lower];
+    var units=trimmed.match(/^(\d[\d,.]*\s+)(People|Person|Pints|Pint|lbs\.?)$/i);
+    if(units)return units[1]+({'people':'personas','person':'persona','pints':'pintas','pint':'pinta','lbs':'libras','lbs.':'libras'}[units[2].toLowerCase()]);
+    var pieces=trimmed.split(/(\s+[—·]\s+)/);
+    if(pieces.length>1)return pieces.map(function(x,i){return i%2?x:(getTranslation(x)||x);}).join('');
+    return null;
+  }
+
+  // 4. DOM Translation Engine
+  var isTranslating = false;
+
+  function shouldSkipNode(node) {
+    if (!node || !node.parentNode) return true;
+    var parent = node.parentNode;
+    var tag = parent.nodeName ? parent.nodeName.toUpperCase() : '';
+    if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'NOSCRIPT' || tag === 'CODE' || tag === 'PRE') {
+      return true;
+    }
+    if (parent.closest && parent.closest('[data-site-foundation-tag], #sf-controls-root')) {
+      return true;
+    }
+    return false;
+  }
+
+  function translateTextNode(node, lang) {
+    if (shouldSkipNode(node)) return;
+    if (node.__sf_orig_text === undefined || (node.__sf_last_output !== undefined && node.nodeValue !== node.__sf_last_output)) {
+      node.__sf_orig_text = node.nodeValue;
+    }
+    if (lang === 'en') {
+      if (node.nodeValue !== node.__sf_orig_text) {
+        node.nodeValue = node.__sf_orig_text;
+      }
+      node.__sf_last_output=node.nodeValue;
+      return;
+    }
+    // Language is 'es'
+    var raw = node.__sf_orig_text;
+    if (!raw || !raw.trim()) return;
+
+    var translated = getTranslation(raw);
+    if (translated) {
+      var leading = raw.match(/^\s*/)[0];
+      var trailing = raw.match(/\s*$/)[0];
+      node.nodeValue = leading + translated + trailing;
+      node.__sf_last_output=node.nodeValue;
+    }
+  }
+
+  function translateAttributes(el, lang) {
+    if (!el || !el.getAttribute) return;
+    if (el.closest && el.closest('[data-site-foundation-tag], #sf-controls-root')) return;
+
+    var attrs = ['alt', 'title', 'placeholder', 'aria-label', 'aria-description'];
+    if (!el.__sf_orig_attrs) el.__sf_orig_attrs = {};
+
+    for (var i = 0; i < attrs.length; i++) {
+      var attr = attrs[i];
+      if (el.hasAttribute(attr)) {
+        if (el.__sf_orig_attrs[attr] === undefined) {
+          el.__sf_orig_attrs[attr] = el.getAttribute(attr);
+        }
+        if (lang === 'en') {
+          el.setAttribute(attr, el.__sf_orig_attrs[attr]);
+        } else {
+          var trans = getTranslation(el.__sf_orig_attrs[attr]);
+          if (trans) el.setAttribute(attr, trans);
+        }
+      }
+    }
+
+    // Meta description tag
+    if (el.nodeName === 'META' && el.getAttribute('name') === 'description') {
+      if (el.__sf_orig_attrs['content'] === undefined) {
+        el.__sf_orig_attrs['content'] = el.getAttribute('content') || '';
+      }
+      if (lang === 'en') {
+        el.setAttribute('content', el.__sf_orig_attrs['content']);
+      } else {
+        var metaTrans = getTranslation(el.__sf_orig_attrs['content']);
+        if (metaTrans) el.setAttribute('content', metaTrans);
+      }
+    }
+  }
+
+  function walkDOM(root, lang) {
+    if (!root) return;
+    if(root.nodeType===1)translateAttributes(root,lang);
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (node) {
+        if (shouldSkipNode(node)) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    }, false);
+
+    var textNode;
+    while ((textNode = walker.nextNode())) {
+      translateTextNode(textNode, lang);
+    }
+
+    // Translate element attributes
+    var elements = root.querySelectorAll ? root.querySelectorAll('[alt], [title], [placeholder], [aria-label], [aria-description], meta[name="description"]') : [];
+    for (var i = 0; i < elements.length; i++) {
+      translateAttributes(elements[i], lang);
+    }
+  }
+
+  // 5. Theme & Color Sampling Engine
+  function parseRgb(colorStr) {
+    if (!colorStr) return null;
+    var match = colorStr.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+    if (match) {
+      return { r: parseInt(match[1], 10), g: parseInt(match[2], 10), b: parseInt(match[3], 10) };
+    }
+    return null;
+  }
+
+  function getLuminance(rgb) {
+    if (!rgb) return 1;
+    return (0.299 * rgb.r + 0.587 * rgb.g + 0.114 * rgb.b) / 255;
+  }
+
+  function applyColorSampling(theme) {
+    if (theme === 'original') {
+      var prevSurfaces = document.querySelectorAll('[data-sf-dark-surface]');
+      for (var i = 0; i < prevSurfaces.length; i++) {
+        prevSurfaces[i].removeAttribute('data-sf-dark-surface');
+      }
+      return;
+    }
+
+    if (theme === 'dark') {
+      var containers = document.querySelectorAll('section, article, main, aside, header:not([class*="hero"]), footer, nav, table, .card, [class*="card"], [class*="box"]:not(.sf-controls-box)');
+      for (var j = 0; j < containers.length; j++) {
+        var el = containers[j];
+        if (el.closest('[data-site-foundation-tag], #sf-controls-root, [data-sf-preserve-theme]')) continue;
+        try {
+          var style = window.getComputedStyle(el);
+          var bg = style.backgroundColor;
+          var bgImg = style.backgroundImage;
+          if (bgImg && bgImg !== 'none') continue; // Preserve photo / hero background
+          var rgb = parseRgb(bg);
+          if (rgb && getLuminance(rgb) > 0.45) {
+            el.setAttribute('data-sf-dark-surface', 'true');
+          }
+        } catch (e) {}
+      }
+    }
+  }
+
+  // 6. Theme and Language Setters & UI Updates
+  function updateUI() {
+    var region=document.getElementById('sf-controls-root');if(region)region.setAttribute('aria-label',currentLang==='es'?'Apariencia e idioma':'Appearance and language');
+    var themeBtn = document.getElementById('sf-theme-btn');
+    var themeText = document.getElementById('sf-theme-text');
+    var langBtn = document.getElementById('sf-lang-btn');
+    var langText = document.getElementById('sf-lang-text');
+
+    if (themeBtn && themeText) {
+      if (currentTheme === 'dark') {
+        themeBtn.setAttribute('aria-pressed', 'true');
+        themeBtn.setAttribute('aria-label', currentLang === 'es' ? 'Cambiar a modo claro' : 'Switch to light mode');
+        themeText.textContent = currentLang === 'es' ? 'Claro' : 'Light';
+        if (themeBtn.querySelector('.sf-icon')) themeBtn.querySelector('.sf-icon').textContent = '☀';
+      } else if (currentTheme === 'light') {
+        themeBtn.setAttribute('aria-pressed', 'false');
+        themeBtn.setAttribute('aria-label', currentLang === 'es' ? 'Cambiar a modo oscuro' : 'Switch to dark mode');
+        themeText.textContent = currentLang === 'es' ? 'Oscuro' : 'Dark';
+        if (themeBtn.querySelector('.sf-icon')) themeBtn.querySelector('.sf-icon').textContent = '☾';
+      } else {
+        themeBtn.setAttribute('aria-pressed', 'false');
+        themeBtn.setAttribute('aria-label', currentLang === 'es' ? 'Cambiar a modo oscuro' : 'Switch to dark mode');
+        themeText.textContent = currentLang === 'es' ? 'Oscuro' : 'Dark';
+        if (themeBtn.querySelector('.sf-icon')) themeBtn.querySelector('.sf-icon').textContent = '☾';
+      }
+    }
+
+    if (langBtn && langText) {
+      if (currentLang === 'es') {
+        langBtn.setAttribute('aria-pressed', 'true');
+        langBtn.setAttribute('aria-label', 'Switch to English');
+        langText.textContent = 'English';
+      } else {
+        langBtn.setAttribute('aria-pressed', 'false');
+        langBtn.setAttribute('aria-label', 'Cambiar a español');
+        langText.textContent = 'Español';
+      }
+    }
+  }
+
+  function applyTheme(theme) {
+    currentTheme = theme;
+    if (theme === 'original') {
+      document.documentElement.removeAttribute('data-theme');
+    } else {
+      document.documentElement.setAttribute('data-theme', theme);
+    }
+    applyColorSampling(theme);
+    safeSet('sf_theme', theme);
+    updateUI();
+  }
+
+  function applyLang(lang) {
+    currentLang = lang;
+    document.documentElement.setAttribute('lang', lang);
+
+    if (!isTranslating) {
+      isTranslating = true;
+      try {
+        walkDOM(document.documentElement, lang);
+      } finally {
+        isTranslating = false;
+      }
+    }
+
+    safeSet('sf_lang', lang);
+    updateUI();
+  }
+
+  // 7. Event Handlers
+  function toggleTheme() {
+    if (currentTheme === 'original' || currentTheme === 'light') {
+      applyTheme('dark');
+    } else {
+      applyTheme('light');
+    }
+  }
+
+  function toggleLang() {
+    if (currentLang === 'es') {
+      applyLang('en');
+    } else {
+      applyLang('es');
+    }
+  }
+
+  function setupEventListeners() {
+    var themeBtn = document.getElementById('sf-theme-btn');
+    var langBtn = document.getElementById('sf-lang-btn');
+
+    if (themeBtn) {
+      themeBtn.addEventListener('click', toggleTheme);
+      themeBtn.addEventListener('keydown', function (e) {
+        if (e.keyCode === 13 || e.keyCode === 32) { // Enter or Space
+          e.preventDefault();
+          toggleTheme();
+        }
+      });
+    }
+
+    if (langBtn) {
+      langBtn.addEventListener('click', toggleLang);
+      langBtn.addEventListener('keydown', function (e) {
+        if (e.keyCode === 13 || e.keyCode === 32) { // Enter or Space
+          e.preventDefault();
+          toggleLang();
+        }
+      });
+    }
+  }
+
+  // 8. MutationObserver for Dynamic Content
+  function setupMutationObserver() {
+    if (!window.MutationObserver || !document.body) return;
+    var observer = new MutationObserver(function (mutations) {
+      if (isTranslating || currentLang === 'en') return;
+      isTranslating = true;
+      observer.disconnect();
+      try {
+        for (var i = 0; i < mutations.length; i++) {
+          var m = mutations[i];
+          if (m.type === 'characterData') {
+            translateTextNode(m.target, currentLang);
+          } else if (m.type === 'childList') {
+            for (var j = 0; j < m.addedNodes.length; j++) {
+              var added = m.addedNodes[j];
+              if (added.nodeType === Node.TEXT_NODE) {
+                translateTextNode(added, currentLang);
+              } else if (added.nodeType === Node.ELEMENT_NODE) {
+                walkDOM(added, currentLang);
+              }
+            }
+          }
+        }
+      } finally {
+        isTranslating = false;
+        observer.observe(document.body, { childList: true, characterData: true, subtree: true });
+      }
+    });
+
+    observer.observe(document.body, { childList: true, characterData: true, subtree: true });
+  }
+
+  // 9. Initialization
+  function init() {
+    // Add top padding space reservation without transform
+    if (document.body && !document.body.classList.contains('sf-adjusted')) {
+      document.body.classList.add('sf-adjusted');
+    }
+
+
+    // Capture original hero/art contrast before applying a theme. The palette must not repaint photography or diagrams.
+    var savedThemeAttr=document.documentElement.getAttribute('data-theme');
+    document.documentElement.removeAttribute('data-theme');
+    var art=document.querySelectorAll('[class*="hero"], [class*="banner"], .art, .washer-frame, [class*="scene"], [class*="visual"], [class*="cutaway"], button:not(.sf-btn), a[class*="btn"], a[class*="cta"]');
+    for(var z=0;z<art.length;z++){
+      var item=art[z];if(item.closest('#sf-controls-root')||item.closest('[data-sf-preserve-theme]'))continue;
+      item.style.color=getComputedStyle(item).color;
+      item.setAttribute('data-sf-preserve-theme','true');
+    }
+    // Keep fixed/sticky navigation below the control box rather than underneath it.
+    // Inline-blend pages (data-sf-inline-controls) keep their own header lining at the top instead.
+    if(!document.documentElement.hasAttribute('data-sf-inline-controls')){
+      var heads=document.querySelectorAll('header,nav,.topbar,.top-bar,.header,.navbar');
+      for(var z=0;z<heads.length;z++){var h=heads[z],st=getComputedStyle(h);if((st.position==='fixed'||st.position==='sticky')&&parseFloat(st.top)<65)h.style.setProperty('top','68px','important');}
+    }
+    if(savedThemeAttr)document.documentElement.setAttribute('data-theme',savedThemeAttr);
+
+    initTranslations();
+    setupEventListeners();
+    setupMutationObserver();
+
+    // Apply saved or default states
+    if (currentTheme !== 'original') {
+      if (!savedTheme && nativeTheme) {
+        // Reflect the page's native palette without persisting an unchosen preference for the whole origin.
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        updateUI();
+      } else {
+        applyTheme(currentTheme);
+      }
+    } else {
+      updateUI();
+    }
+
+    if (currentLang !== 'en') {
+      applyLang(currentLang);
+    } else {
+      updateUI();
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
+</script></body>
 </html>
